@@ -24,6 +24,11 @@ const serverlessConfiguration: AWS = {
         Action: ['dynamodb:*'],
         Resource: ['*'],
       },
+      {
+        Effect: 'Allow',
+        Action: ['s3:*'],
+        Resource: ['*'],
+      },
     ],
   },
   // import the function via paths
