@@ -1,0 +1,140 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@900&display=swap"
+    rel="stylesheet" />
+
+  <style id="page_style">
+    @page {
+      size: 1500px 920px;
+      margin: 0px;
+    }
+  </style>
+  <style>
+    *,
+    root,
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .content {
+      width: 1500px;
+      height: 920px;
+      background: #000;
+      margin-top: -226px;
+    }
+
+    .label {
+      margin-top: 176px;
+      color: #04d361;
+      margin-left: 100px;
+      font-size: 60px;
+      font-weight: bold;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+
+    .name {
+      font-size: 28px;
+      font-family: "Roboto", sans-serif;
+      color: #fff;
+      margin-left: 100px;
+      margin-top: 30px;
+    }
+
+    .medal {
+      padding: 104px;
+    }
+
+    .medal img {
+      width: 193px;
+    }
+
+    .title {
+      color: #fff;
+      height: 100px;
+      margin-left: 100px;
+      margin-top: 226px;
+      font-size: 50px;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .complete_text {
+      color: #fff;
+      font-family: "Roboto Light", sans-serif;
+      font-size: 20px;
+      margin-left: 100px;
+      margin-top: 150px;
+      max-width: 500px;
+      text-align: left;
+      line-height: 25px;
+    }
+
+    .date {
+      color: #04d361;
+      margin-left: 44px;
+      font-size: 23px;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .uuid {
+      color: #fff;
+      padding-left: 0px;
+      font-size: 19px;
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .right {
+      float: right;
+      position: absolute;
+      top: 114px;
+      margin-left: 1000px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="certificate">
+    <div class="content">
+      <div class="left">
+        <div class="title">
+          <br />
+          <span>Ignite - Node.Js</span>
+        </div>
+        <div class="label">
+          <label class="">Certificado</label>
+        </div>
+
+        <div class="name">
+          <label for=""> {{name}}</label>
+        </div>
+
+        <div class="complete_text">
+          <span>Completou com sucesso a trilha de Node.JS no Ignite, tendo
+            conhecimento em API, Banco de Dados, AWS, Serverless, com
+            aproveitamento {{grade}}
+          </span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="medal">
+          <img src="data:image/png;base64,{{medal}}" alt="" />
+        </div>
+        <div class="date">
+          <strong>Data de emissão:</strong> {{date}}
+          <br />
+        </div>
+        <div class="uuid">
+          <span> {{id}} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
