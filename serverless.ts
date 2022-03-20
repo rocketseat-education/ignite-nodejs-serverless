@@ -4,7 +4,12 @@ import type { AWS } from '@serverless/typescript';
 const serverlessConfiguration: AWS = {
   service: 'ignitecertificate',
   frameworkVersion: '2',
-  plugins: ['serverless-esbuild', 'serverless-dynamodb-local', 'serverless-offline'],
+  plugins: [
+    'serverless-esbuild',
+    'serverless-dynamodb-local',
+    'serverless-s3-local',
+    'serverless-offline',
+  ],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
@@ -78,6 +83,10 @@ const serverlessConfiguration: AWS = {
         migrate: true,
       },
     },
+    s3: {
+      host: 'localhost',
+      directory: './tmp',
+    },
   },
   resources: {
     Resources: {
@@ -101,6 +110,12 @@ const serverlessConfiguration: AWS = {
               KeyType: 'HASH',
             },
           ],
+        },
+      },
+      bucketCertificates: {
+        Type: 'AWS::S3::Bucket',
+        Properties: {
+          BucketName: 'certificadoignite2021',
         },
       },
     },

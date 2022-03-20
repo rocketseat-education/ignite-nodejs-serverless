@@ -9,3 +9,6 @@ jspm_packages
 .esbuild
 
 .dynamodb
+
+tmp/*
+!tmp/.gitkeep

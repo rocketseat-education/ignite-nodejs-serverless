@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 import { join } from 'path';
 import { readFileSync } from 'fs';
 import chromium from 'chrome-aws-lambda';
-import { S3 } from 'aws-sdk';
+import { s3 } from "../utils/s3Client";
 
 interface ICreateCertificate {
   id: string;
@@ -90,7 +90,6 @@ export const handler: APIGatewayProxyHandler = async (event) => {
 
   await browser.close();
 
-  const s3 = new S3();
 
   // await s3
   //   .createBucket({
